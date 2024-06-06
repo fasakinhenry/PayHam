@@ -1,3 +1,9 @@
+# PayHam
+
+Payham is an innovative fintech application designed to provide financial inclusion across Africa and globally.
+
+Project Brief: https://docs.google.com/document/d/1btHsPJWXmG4DrdnKhmXtHo_1vb1FxANVf4SUgP-bmtk/edit
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
