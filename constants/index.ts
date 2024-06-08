@@ -6,7 +6,7 @@ export const sidebarLinks = [
   },
   {
     imgURL: "/icons/message-favorite.svg",
-    route: "/my-banks",
+    route: "/socials",
     label: "Socials",
   },
   {
