@@ -18,7 +18,7 @@ const Sidebar = ({ user }: SidebarProps) => {
             height={34}
             width={34}
             alt='PayHam Logo'
-            className='size-[32px] max-xl:size-14'
+            className='size-[24px] max-xl:size-14'
           />
           <h1 className='sidebar-logo'>PayHam</h1>
         </Link>
