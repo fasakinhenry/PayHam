@@ -99,7 +99,24 @@ const AuthForm = ({ type }: { type: string }) => {
                     label='Address'
                     placeholder='Enter your specific address'
                   />
-                  
+                  <CustomInput
+                    control={form.control}
+                    name='state'
+                    label='State'
+                    placeholder='Example: Lagos state'
+                  />
+                  <CustomInput
+                    control={form.control}
+                    name='postalCode'
+                    label='Postal Code'
+                    placeholder='Example:  102101'
+                  />
+                  <CustomInput
+                    control={form.control}
+                    name='dateOfBirth'
+                    label='Date of Birth'
+                    placeholder='YYYY-MM-DD'
+                  />
                 </>
               )}
               <CustomInput
