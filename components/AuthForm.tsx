@@ -24,10 +24,6 @@ import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { signIn, signUp } from '@/lib/actions/user.actions';
 
-const formSchema = z.object({
-  email: z.string().email(),
-});
-
 const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
   const [user, setUser] = useState(null);
@@ -41,6 +37,14 @@ const AuthForm = ({ type }: { type: string }) => {
     defaultValues: {
       email: '',
       password: '',
+      firstName: '',
+      lastName: '',
+      address1: '',
+      city: '',
+      state: '',
+      postalCode: '',
+      ssn: '',
+      dateOfBirth: '',
     },
   });
 
@@ -52,7 +56,21 @@ const AuthForm = ({ type }: { type: string }) => {
     try {
       // Signup with appwrite & create plain Link token
       if (type === 'sign-up') {
-        const newUser = await signUp(data);
+        const userData = {
+          firstName: data.firstName!,
+          lastName: data.lastName!,
+          address1: data.address1!,
+          city: data.city!,
+          state: data.state!,
+          postalCode: data.postalCode!,
+          dateOfBirth: data.dateOfBirth!,
+          ssn: data.ssn!,
+          email: data.email,
+          password: data.password,
+        };
+
+        const newUser = await signUp(userData);
+
         setUser(newUser);
       }
 
@@ -61,7 +79,6 @@ const AuthForm = ({ type }: { type: string }) => {
         //   email: data.email,
         //   password: data.password,
         // });
-
         // if (response) router.push('/');
       }
     } catch (error) {
