@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/link"
+import Image from 'next/image'
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,7 +13,7 @@ const SignIn = () => {
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-left">
             <div className='flex py-5 gap-2'>
-                <img src='/icons/logo-blue-upsidedown.svg' width={'30'}/>
+                <Image src='/icons/logo-blue-upsidedown.svg' width={'30'} alt="PayHam logo"/>
                 <p className='font-ibm-plex-serif font-bold text-2xl  text-gray-800'>PayHam</p>
             </div>
             
