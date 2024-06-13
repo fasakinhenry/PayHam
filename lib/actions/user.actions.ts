@@ -26,7 +26,7 @@ export const signUp = async (userData: SignUpParams) => {
       path: '/',
       httpOnly: true,
       sameSite: 'strict',
-      secure: false
+      secure: true
     });
     return parseStringify(newUserAccount);
   } catch (error) {
@@ -37,7 +37,8 @@ export const signUp = async (userData: SignUpParams) => {
 export async function getLoggedInUser() {
   try {
     const { account } = await createSessionClient();
-    return await account.get();
+    const user = await account.get();
+    return parseStringify(user)
   } catch (error) {
     return null;
   }
